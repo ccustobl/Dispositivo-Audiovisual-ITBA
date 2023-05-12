@@ -1,0 +1,305 @@
+/* -------------------------------- */
+/* Author: Custo Blanch, Christian */
+/* Project: Overhead Projector Phase 2 */
+/* ITBA */
+/* -------------------------------- */
+* {
+    margin: 0;
+    padding: 0; }
+
+.spacer-s {
+    height: 10px; }
+
+.spacer-m {
+    height: 50px; }
+    
+.spacer-l {
+    height: 150px; }
+
+#pdf-container {
+    width: 100%;
+    max-width: 1000px;
+    height: 120vh;
+    position: relative;
+    margin: auto;
+    padding: 0px; }
+        
+#pdf-viewer {
+    width: 100%;
+    height: calc(100% - 160px);
+    margin-top: 100px; }
+
+#btn {
+    display: block;
+    margin: 10px auto;
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto', serif; }
+
+.btn {
+    display: block;
+    font-family: 'Roboto', serif;
+    margin: 10px auto;
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding-right: 40px;
+    cursor: pointer;
+    font-size: 18px; }
+    
+.btn:hover {
+    background-color: RoyalBlue; }       
+
+.notice {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    padding-bottom: 14px;
+    max-width: 1000px;
+    background-color: #f8d7da;
+    color: #721c24;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Roboto', serif; }
+        
+.contact-container {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Roboto', serif; }
+
+.body {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(29, 30, 36, 0.7), rgba(29, 30, 36, 0.7)), url(https://periferia.com.ar/wp-content/uploads/2022/10/ITBA-I-AGEN-NUEVA-800x445.jpg);
+    background-position: center;
+    background-color: #fff;
+    background-size: cover;
+    position: relative; }
+  
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; }
+  
+nav img {
+    width: 180px; }
+  
+.nav-links {
+    flex: 1;
+    text-align: right; }
+  
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative; }
+  
+.nav-links ul li a {
+    color: #000;
+    text-decoration: none;
+    font-family: 'Roboto', serif;
+    font-weight: 700;
+    font-size: 32px;
+    font-style: normal;
+    text-align: center; }
+    
+.nav-links li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000;
+    display: block;
+    margin: auto;
+    transition: 0.5s; }
+  
+.nav-links li:hover::after {
+    width: 100%; }
+
+.ubicacion {
+    width: 51.8%;
+    margin: auto;
+    align-items: center;
+    padding: 10px;
+    max-width: 1000px; }
+
+.ubicacion iframe {
+    width: 100%; }
+
+.text-box-title {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+    font-size: 30px;
+    font-style: normal;
+    text-align: center; }
+
+.text-box {
+    top: 30%;
+    left: 50%;
+    width: 90%;
+    color: #fff;
+    transform: translate(5%, 10%);
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+    font-size: 25px;
+    font-style: normal; }
+    
+.text-box p { 
+    text-indent: 5%;
+    text-align: justify;
+    line-height: 106%; }
+
+.text-box h1 {
+    text-align: center; }
+
+.text-box-2 {
+    top: 30%;
+    left: 50%;
+    width: 90%;
+    color: #fff;
+    transform: translate(5%, 10%);
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+    font-size: 20px;
+    font-style: normal; }
+
+.text-box-2 p { 
+    text-align: center;
+    line-height: 106%; }
+
+.image {
+    padding-top: 4%;
+    display: flex;
+    justify-content: center; }
+
+.footer {
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+    font-size: 15px;
+    font-style: normal;
+    color: #fff;
+    text-align: center;
+    padding-top: 5%; }
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none; }
+
+.fa:hover {
+    opacity: 0.7; }
+
+.logo:hover {
+    opacity: 0.5; }
+
+.menu-simple li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: center; }
+
+.social-footer {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0; }
+
+.social-footer-icons {
+    margin: auto; }
+
+.social-footer-icons i {
+    color: #fff;
+    font-size: 35px;
+    align-items: center;
+    text-align: center;
+    padding: 10px; }
+
+/* Media query for screens with maximum width of 767px 
+@media (max-width: 767px) {
+    /* Add styles for mobile devices here 
+    .header {
+        height: auto;
+        padding-bottom: 60px;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 1;
+        text-align: right;
+    }
+    .nav-links ul {
+        display: block;
+        padding: 0;
+    }
+    .nav-links ul li {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .nav-links ul li a {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .fa-bars {
+        display: none;
+    }
+    .fa-times {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+/* Media query for screens with minimum width of 768px 
+@media (min-width: 768px) {
+    /* Add styles for larger screens here 
+    .nav-links {
+        display: flex !important;
+        position: static;
+        background-color: transparent;
+    }
+    .nav-links ul {
+        display: flex;
+    }
+    .nav-links ul li {
+        margin-left: 20px;
+    }
+    .nav-links ul li a {
+        font-size: 18px;
+    }
+    .fa-bars {
+        display: none;
+    }
+    .fa-times {
+        display: none;
+    }
+}
+*/
+
+/* -------------------------------- */

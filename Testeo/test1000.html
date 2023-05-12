@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dispositivo Audiovisual para uso en Aulas de Nivel Incial</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .tab {
+      display: none;
+    }
+    .tab.active {
+      display: block;
+    }
+    #pdf-container {
+      width: 100%;
+      max-width: 1000px;
+      height: 100vh;
+      position: relative;
+      margin: 10px auto;
+      padding: 15px;
+    }
+    #pdf-viewer {
+      width: 100%;
+      height: calc(100% - 160px);
+      margin-top: 100px;
+    }
+    #download-btn {
+      display: block;
+      margin: 10px auto;
+      width: 120px;
+      padding: 10px;
+      text-align: center;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+    }
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      max-width: 150px;
+    }
+    .title {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .spacer {
+      height: 10px;
+    }
+    .notice {
+      margin-top: 0px;
+      padding: 10px;
+      background-color: #f8d7da;
+      color: #721c24;
+      font-size: 16px;
+      text-align: center;
+    }
+    .contact-container {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 18px;
+    }
+    .contact-info {
+      margin-top: 20px;
+    }
+    .contact-info p {
+      margin-bottom: 5px;
+    }
+    .tab-header {
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      font-weight: bold;
+    }
+    .tab-header.active {
+      background-color: #0056b3;
+    }
+  </style>
+  <script>
+    function changeTab(tabIndex) {
+      var tabs = document.getElementsByClassName("tab");
+      var tabHeaders = document.getElementsByClassName("tab-header");
+      for (var i = 0; i < tabs.length; i++) {
+        if (i === tabIndex) {
+          tabs[i].classList.add("active");
+          tabHeaders[i].classList.add("active");
+        } else {
+          tabs[i].classList.remove("active");
+          tabHeaders[i].classList.remove("active");
+        }
+      }
+    }
+
+    // Set the "Instructivo" tab as active by default
+    window.onload = function() {
+      changeTab(0);
+    };
+    
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</head>
+<body>
+    <img class="logo" src="/assets/logo-itba.jpg" alt="Logo">
+    <div class="title">INSTITUTO TECNOLÓGICO DE BUENOS AIRES</div>
+    <div class="spacer"></div>
+    <div class="tab-header" onclick="changeTab(0)">Instructivo</div>
+    <div class="tab-header" onclick="changeTab(1)">Contacto</div>
+    <div id="pdf-container" class="tab">
+    <div id="pdf-viewer">
+        <object id="pdf-viewer" type="application/pdf" data="/assets/Manual de uso.pdf"></object>
+    </div>
+    <div class="notice">En caso de no poder visualizar correctamente el archivo, por favor descárguelo con el siguiente botón:</div>
+    <a id="download-btn" href="/assets/manual.pdf" download>Descargar Manual</a>
+    
+      </div>
+      <div class="tab" id="contact-tab">
+        <div class="spacer"></div>
+        <div class="notice">Para consultas o más información, por favor contáctenos:</div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <p>Teléfono: +1 (123) 456-7890</p>
+            <p>Email: info@itba.edu.ar</p>
+            <p>Dirección: Av. Madero 399, Buenos Aires, Argentina</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab" id="instructivo-tab">
+        <div class="spacer"></div>
+        <div id="pdf-container">
+            <img class="logo" src="/assets/logo-itba.jpg" alt="Logo">
+            <div class="title">INSTITUTO TECNOLÓGICO DE BUENOS AIRES</div>
+            <object id="pdf-viewer" type="application/pdf" data="/assets/Manual de uso.pdf"></object>
+          </div>
+          <div class="notice">En caso de no poder visualizar correctamente el archivo, por favor descárguelo con el siguiente botón:</div>
+          <a id="download-btn" href="/assets/Manual de uso.pdf" download>Download</a>
+          <div class="spacer"></div>
+      </div>
+        <div class="spacer"></div>
+      </div>
+    </body>
+    </html>

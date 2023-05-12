@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dispositivo Audiovisual para uso en Aulas de Nivel Inicial</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #pdf-container {
+      width: 100%;
+      max-width: 1000px;
+      height: 100vh;
+      position: relative;
+      margin: 10px auto;
+      padding: 15px;
+    }
+    #pdf-viewer {
+      width: 100%;
+      height: calc(100% - 160px);
+      margin-top: 100px;
+    }
+    #download-btn {
+      display: block;
+      margin: 10px auto;
+      width: 120px;
+      padding: 10px;
+      text-align: center;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+    }
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      max-width: 150px;
+    }
+    .title {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .spacer {
+      height: 10px;
+    }
+    .notice {
+      margin-top: 0px;
+      padding: 10px;
+      background-color: #f8d7da;
+      color: #721c24;
+      font-size: 16px;
+      text-align: center;
+    }
+    .tab {
+      display: none;
+    }
+    .tab.active {
+      display: block;
+    }
+    .tab-content {
+      padding: 15px;
+    }
+    .tab-links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    .tab-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #007bff;
+      cursor: pointer;
+    }
+    .tab-links a.active {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="pdf-container">
+    <img class="logo" src="/assets/logo-itba.jpg" alt="Logo">
+    <div class="title">INSTITUTO TECNOLÓGICO DE BUENOS AIRES</div>
+    <div class="tab-links">
+      <a onclick="openTab(event, 'instrucciones')" class="active">Instrucciones</a>
+      <a onclick="openTab(event, 'contacto')">Contacto</a>
+    </div>
+    <div id="instrucciones" class="tab active">
+      <object id="pdf-viewer" type="application/pdf" data="/assets/Manual de uso.pdf"></object>
+      <div class="notice">En caso de no poder visualizar correctamente el archivo, por favor descárguelo con el siguiente botón:</div>
+      <a id="download-btn" href="/assets/Manual de uso.pdf" download>Download</a>
+    </div>
+    <div id="contacto" class="tab">
+      <div class="tab-content">
+        <h2>Contacto</h2>
+        <!-- Contact information goes here -->
+      </div.tab">
+      <div class="tab-content">
+      <h2>Contacto</h2>
+      <!-- Contact information goes here -->
+      </div>
+      </div>
+      </div>
+      
+        </div>
+        <script>
+          function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-links");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+        </script>
+      </body>
+      </html>
